@@ -7,10 +7,19 @@
   <title>Document</title>
   <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .active{
+      background:#422AD5 ;
+      color: white;
+    }
+  </style>
 </head>
 
 <body>
-  <nav>
+  <nav class="sticky top-0">
     <div class="navbar bg-base-100 shadow-sm px-8">
       <div class="flex-1 flex gap-3 items-center">
         <h2>
@@ -20,8 +29,8 @@
         <h2>জানালা</h2>
       </div>
       <div class="flex-none flex gap-7">
-        <button class="btn text-[#422AD5]"><img src="assets/fa-circle-question.png" alt="">FAQ</button>
-        <button class="btn text-[#422AD5]"><img src="assets/fa-book-open.png" alt="">Learn</button>
+       <a href="#acordion"> <button class="btn text-[#422AD5]"><img src="assets/fa-circle-question.png" alt="">FAQ</button></a>
+        <a href="#lesson"><button class="btn text-[#422AD5]"><img src="assets/fa-book-open.png" alt="">Learn</button></a>
         <button class="btn text-[#422AD5]"><img src="assets/fa-arrow-right-from-bracket.png" alt="">Log out</button>
       </div>
     </div>
@@ -51,7 +60,8 @@
     <section id="learn">
       <h2 class="text-3xl font-bold text-center"><span class="text-[#0096FF]">Let's</span> Learn Vocabularies</h2>
       <!-- api -->
-      <div id="lesson" class="flex justify-center gap-7 mt-9">
+      <div id="lesson" class="flex justify-center gap-7 mt-9 scroll-mt-20
+">
         <!-- <button class="btn border border-[#422AD5] text-[#422AD5] hover:text-white hover:bg-[#422AD5]"><img
             src="assets/fa-book-open.png" alt="">Lesson-</button> -->
       </div>
@@ -84,13 +94,95 @@
     </section>
 
 
+    <!-- FAQ -->
+    <section id="acordion" class="mt-56 scroll-mt-20
+">
+      <h2 class="text-3xl font-bold text-center mt-4"><span class="text-[#0096FF]">Frequently</span> Asked Questions</h2>
+     <div class="space-y-4 mt-9">
+       <div class="collapse collapse-plus bg-base-100 border border-base-300">
+        <input type="radio" name="my-accordion-3" checked="checked" />
+        <div class="collapse-title font-semibold">1. How can I start learning English on this website?</div>
+        <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the
+          registration process.</div>
+      </div>
+      <div class="collapse collapse-plus bg-base-100 border border-base-300">
+        <input type="radio" name="my-accordion-3" />
+        <div class="collapse-title font-semibold">2. Is this website free to use?</div>
+        <div class="collapse-content text-sm">Click on "Forgot Password" on the login page and follow the instructions
+          sent to your email.</div>
+      </div>
+      <div class="collapse collapse-plus bg-base-100 border border-base-300">
+        <input type="radio" name="my-accordion-3" />
+        <div class="collapse-title font-semibold">3. Do I need to create an account?</div>
+        <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.
+        </div>
+      </div>
+      <div class="collapse collapse-plus bg-base-100 border border-base-300">
+        <input type="radio" name="my-accordion-3" />
+        <div class="collapse-title font-semibold">4. How can I build my English vocabulary?</div>
+        <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.
+        </div>
+      </div>
+      <div class="collapse collapse-plus bg-base-100 border border-base-300">
+        <input type="radio" name="my-accordion-3" />
+        <div class="collapse-title font-semibold">5. Do you offer certificates for completed courses?</div>
+        <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.
+        </div>
+      </div>
+     </div>
+    </section>
+    <!-- modal -->
+     <!-- Open the modal using ID.showModal() method -->
+<!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+<dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+  <div id="details-con">
+
+  </div>
+  <div id="modal" class="modal-box">
+    <h3 class="text-lg font-bold">Hello!</h3>
+    <h2 class="text-xs font-semibold">Meaning</h2>
+    <h3></h3>
+    <h2 class="text-xs font-semibold">Example</h2>
+    <h2 class="text-xs font-normal text-gray-500"></h2>
+    <h3>সমার্থক শব্দ গুলো</h3>
+    <div class="felx ">
+      <div class="btn "></div>
+    </div>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+
+
 
   </main>
-  <footer>
-
-
-
-
+  <!-- footer -->
+  <footer class="border-t-4 mt-44 border-[#FFEBEB]">
+    <div class="flex justify-between items-center py-20 max-w-11/12 mx-auto ">
+      <div class="space-y-3">
+        <div class="flex gap-4 items-center">
+           <h2>
+          English
+        </h2>
+        <img src="assets/logo.png" alt="">
+        <h2>জানালা</h2>
+        </div>
+        <h2 class="font-bold text-sm">ইংরেজি শিখুন সহজে</h2>
+        <h2 class=" text-sm">Providing ED-Tech Applications since 2025</h2>
+      </div>
+      <div>
+        <h2 class="text-gray-700">Follow us</h2>
+        <div class="flex gap-3">
+          <img class="w-5" src="https://img.icons8.com/?size=100&id=118466&format=png&color=000000" alt="">
+          <img class="w-5"  src="https://img.icons8.com/?size=100&id=62852&format=png&color=000000" alt="">
+          <img class="w-5"  src="https://img.icons8.com/?size=100&id=106562&format=png&color=000000" alt="">
+        </div>
+      </div>
+    </div>
   </footer>
 
 
